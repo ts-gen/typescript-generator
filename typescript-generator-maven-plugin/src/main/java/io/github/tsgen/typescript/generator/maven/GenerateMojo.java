@@ -72,6 +72,12 @@ public class GenerateMojo extends AbstractMojo {
     private String namespace;
 
     /**
+     * Generates Typescript with default Optional Field
+     */
+    @Parameter
+    private boolean allOptional;
+
+    /**
      * Generates TypeScript namespaces from Java packages. Default is <code>false</code>.
      */
     @Parameter
@@ -848,6 +854,7 @@ public class GenerateMojo extends AbstractMojo {
         if (outputFileType != null) {
             settings.outputFileType = outputFileType;
         }
+        settings.allOptional = allOptional;
         settings.outputKind = outputKind;
         settings.module = module;
         settings.namespace = namespace;

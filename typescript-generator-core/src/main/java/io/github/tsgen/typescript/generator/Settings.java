@@ -46,6 +46,7 @@ import java.util.stream.Stream;
  * @see <a href="https://github.com/vojtechhabarta/typescript-generator/wiki">Wiki</a> on GitHub
  */
 public class Settings {
+    public boolean allOptional = false;
     public String newline = String.format("%n");
     public String quotes = "\"";
     public String indentString = "    ";
