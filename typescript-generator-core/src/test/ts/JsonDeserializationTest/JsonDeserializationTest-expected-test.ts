@@ -1,4 +1,4 @@
-import { Address, Order, PagedList, Rectangle, ShapeMetadata, Square, User, Authentication } from "../../resources/cz/habarta/typescript/generator/JsonDeserializationTest-expected";
+import { Address, Order, PagedList, Rectangle, ShapeMetadata, Square, User, Authentication } from "../../resources/io/github/tsgen/typescript/generator/JsonDeserializationTest-expected";
 
 // load JSON data
 const data = require("./JsonDeserializationTest-expected-test-data");
@@ -94,7 +94,7 @@ assertType((user.shapes[0] as Rectangle).height, "number");
 
 
 // augment User
-declare module "../../resources/cz/habarta/typescript/generator/JsonDeserializationTest-expected" {
+declare module "../../resources/io/github/tsgen/typescript/generator/JsonDeserializationTest-expected" {
     interface User {
         equals(other: User): boolean;
     }

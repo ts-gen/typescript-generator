@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>cz.habarta.typescript-generator</groupId>
+        <groupId>io.github.ts-gen</groupId>
         <artifactId>typescript-generator</artifactId>
         <version>3.2-SNAPSHOT</version>
     </parent>
@@ -242,7 +242,7 @@
                         </goals>
                         <configuration>
                             <schemaDirectory>src/main/schema</schemaDirectory>
-                            <generatePackage>cz.habarta.typescript.generator.xmldoclet</generatePackage>
+                            <generatePackage>io.github.tsgen.typescript.generator.xmldoclet</generatePackage>
                         </configuration>
                     </execution>
                 </executions>
@@ -261,25 +261,25 @@
                         <configuration>
                             <target>
                                 <copy
-                                    file="src/test/java/cz/habarta/typescript/generator/JaxrsApplicationTest.java"
-                                    tofile="src/test/java/cz/habarta/typescript/generator/JaxrsV2ApplicationTest.java"/>
+                                    file="src/test/java/io/github/tsgen/typescript/generator/JaxrsApplicationTest.java"
+                                    tofile="src/test/java/io/github/tsgen/typescript/generator/JaxrsV2ApplicationTest.java"/>
                                 <replace
-                                    file="src/test/java/cz/habarta/typescript/generator/JaxrsV2ApplicationTest.java"
+                                    file="src/test/java/io/github/tsgen/typescript/generator/JaxrsV2ApplicationTest.java"
                                     token="JaxrsApplicationTest"
                                     value="JaxrsV2ApplicationTest"/>
                                 <replace
-                                    file="src/test/java/cz/habarta/typescript/generator/JaxrsV2ApplicationTest.java"
+                                    file="src/test/java/io/github/tsgen/typescript/generator/JaxrsV2ApplicationTest.java"
                                     token="jakarta.ws.rs"
                                     value="javax.ws.rs"/>
                                 <copy
-                                    file="src/test/java/cz/habarta/typescript/generator/parser/JsonbParserTest.java"
-                                    tofile="src/test/java/cz/habarta/typescript/generator/parser/JsonbV1ParserTest.java"/>
+                                    file="src/test/java/io/github/tsgen/typescript/generator/parser/JsonbParserTest.java"
+                                    tofile="src/test/java/io/github/tsgen/typescript/generator/parser/JsonbV1ParserTest.java"/>
                                 <replace
-                                    file="src/test/java/cz/habarta/typescript/generator/parser/JsonbV1ParserTest.java"
+                                    file="src/test/java/io/github/tsgen/typescript/generator/parser/JsonbV1ParserTest.java"
                                     token="JsonbParserTest"
                                     value="JsonbV1ParserTest"/>
                                 <replace
-                                    file="src/test/java/cz/habarta/typescript/generator/parser/JsonbV1ParserTest.java"
+                                    file="src/test/java/io/github/tsgen/typescript/generator/parser/JsonbV1ParserTest.java"
                                     token="jakarta.json.bind"
                                     value="javax.json.bind"/>
                             </target>
@@ -293,8 +293,8 @@
                         </goals>
                         <configuration>
                             <target>
-                                <delete file="src/test/java/cz/habarta/typescript/generator/JaxrsV2ApplicationTest.java"/>
-                                <delete file="src/test/java/cz/habarta/typescript/generator/parser/JsonbV1ParserTest.java"/>
+                                <delete file="src/test/java/io/github/tsgen/typescript/generator/JaxrsV2ApplicationTest.java"/>
+                                <delete file="src/test/java/io/github/tsgen/typescript/generator/parser/JsonbV1ParserTest.java"/>
                             </target>
                         </configuration>
                     </execution>
