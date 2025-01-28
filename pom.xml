@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cz.habarta.typescript-generator</groupId>
+    <groupId>io.github.ts-gen</groupId>
     <artifactId>typescript-generator</artifactId>
     <packaging>pom</packaging>
     <version>3.2-SNAPSHOT</version>
@@ -20,7 +20,7 @@
     <licenses>
         <license>
             <name>MIT License</name>
-            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <url>https://www.opensource.org/licenses/mit-license.php</url>
         </license>
     </licenses>
 
@@ -32,23 +32,23 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:vojtechhabarta/typescript-generator.git</connection>
-        <developerConnection>scm:git:git@github.com:vojtechhabarta/typescript-generator.git</developerConnection>
-        <url>https://github.com/vojtechhabarta/typescript-generator</url>
+        <connection>scm:git:git@github.com:ts-gen/typescript-generator.git</connection>
+        <developerConnection>scm:git:git@github.com:ts-gen/typescript-generator.git</developerConnection>
+        <url>https://github.com/ts-gen/typescript-generator</url>
     </scm>
 
     <distributionManagement>
         <snapshotRepository>
-            <id>ossrh-vojtech@habarta.cz</id>
+            <id>maven-central</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
-            <id>ossrh-vojtech@habarta.cz</id>
+            <id>maven-central</id>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
         <site>
             <id>github.io</id>
-            <url>http://vojtechhabarta.github.io/typescript-generator</url>
+            <url>https://vojtechhabarta.github.io/typescript-generator</url>
         </site>
     </distributionManagement>
 

@@ -74,7 +74,7 @@ In Maven build you can use `typescript-generator-maven-plugin` like this:
     <configuration>
         <jsonLibrary>jackson2</jsonLibrary>
         <classes>
-            <class>cz.habarta.typescript.generator.Person</class>
+            <class>io.github.tsgen.typescript.generator.Person</class>
         </classes>
         <outputKind>module</outputKind>
     </configuration>
@@ -107,9 +107,9 @@ For the Kotlin Gradle DSL you can alternatively use the `cz.habarta.typescript-g
 
 #### build.gradle.kts
 ```kotlin
-import cz.habarta.typescript.generator.JsonLibrary
-import cz.habarta.typescript.generator.TypeScriptFileType
-import cz.habarta.typescript.generator.TypeScriptOutputKind
+import io.github.tsgen.typescript.generator.JsonLibrary
+import io.github.tsgen.typescript.generator.TypeScriptFileType
+import io.github.tsgen.typescript.generator.TypeScriptOutputKind
 
 plugins {
     id("cz.habarta.typescript-generator") version "x.y.z"
