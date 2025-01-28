@@ -21,6 +21,7 @@ import org.apache.maven.project.MavenProject;
  * Generates TypeScript declaration file from specified java classes.
  * For more information see README and Wiki on GitHub.
  */
+@SuppressWarnings({"unused", "JavadocReference"})
 @Mojo(name = "generate", defaultPhase = LifecyclePhase.PROCESS_CLASSES, requiresDependencyResolution = ResolutionScope.COMPILE, threadSafe = true)
 public class GenerateMojo extends AbstractMojo {
 
@@ -266,7 +267,7 @@ public class GenerateMojo extends AbstractMojo {
      * Supported values are:
      * <ul>
      * <li><code>questionMark</code> - property will be marked using <code>?</code> character as optional</li>
-     * <li><code>questionMarkAndNullableType</code> - property will be optional and it will also have union with <code>null</code> value</li>
+     * <li><code>questionMarkAndNullableType</code> - property will be optional, and it will also have union with <code>null</code> value</li>
      * <li><code>nullableType</code> - property will not be optional but its type will be union with <code>null</code> value</li>
      * <li><code>nullableAndUndefinableType</code> - property will not be optional but its type will be union with <code>null</code> and <code>undefined</code> values</li>
      * <li><code>undefinableType</code> - property will not be optional but its type will be union with <code>undefined</code> value</li>
@@ -580,7 +581,7 @@ public class GenerateMojo extends AbstractMojo {
 
     /**
      * Specifies HTTP request options type in REST application.
-     * By default no <code>options</code> parameter is generated.
+     * By default, no <code>options</code> parameter is generated.
      * Useful when passing additional parameters to underlying HTTP request method (like jQuery ajax settings or <code>AxiosRequestConfig</code>).
      * Can be specific (for example <code>AxiosRequestConfig</code>) or generic (for example <code>&lt;O></code>).
      */
@@ -590,7 +591,7 @@ public class GenerateMojo extends AbstractMojo {
     /**
      * Specifies custom class implementing {@link TypeProcessor}.
      * This allows to customize how Java types are mapped to TypeScript.
-     * For example it is possible to implement TypeProcessor
+     * For example, it is possible to implement TypeProcessor
      * for {@link com.google.common.base.Optional} from guava.
      */
     @Parameter
@@ -610,7 +611,7 @@ public class GenerateMojo extends AbstractMojo {
 
     /**
      * If <code>true</code> generated file will not contain comment at the top.
-     * By default there is a comment with timestamp and typescript-generator version.
+     * By default, there is a comment with timestamp and typescript-generator version.
      * So it might be useful to suppress this comment if the file is in source control and is regenerated in build.
      */
     @Parameter
@@ -618,7 +619,7 @@ public class GenerateMojo extends AbstractMojo {
 
     /**
      * If <code>true</code> generated file will not be prevented from linting by TSLint.
-     * By default there is a {@code tslint:disable} comment that will force TSLint to ignore the generated file.
+     * By default, there is a {@code tslint:disable} comment that will force TSLint to ignore the generated file.
      * This can be enabled to suppress this comment so that the file can be linted by TSLint.
      */
     @Parameter
@@ -626,7 +627,7 @@ public class GenerateMojo extends AbstractMojo {
 
     /**
      * If <code>true</code> generated file will not be prevented from linting by ESLint.
-     * By default there is a {@code eslint-disable} comment that will force ESLint to ignore the generated file.
+     * By default, there is a {@code eslint-disable} comment that will force ESLint to ignore the generated file.
      * This can be enabled to suppress this comment so that the file can be linted by ESLint.
      */
     @Parameter
@@ -651,11 +652,11 @@ public class GenerateMojo extends AbstractMojo {
      * List of extensions specified as fully qualified class name.
      * Known extensions:
      * <ul>
-     * <li><code>cz.habarta.typescript.generator.ext.AxiosClientExtension}</code>
+     * <li><code>io.github.tsgen.typescript.generator.ext.AxiosClientExtension}</code>
      *   - generates client for JAX-RS service using Axios library, see <a href="https://github.com/vojtechhabarta/typescript-generator/wiki/JAX-RS-Application">JAX RS Application</a>Wiki page</li>
-     * <li><code>cz.habarta.typescript.generator.ext.BeanPropertyPathExtension}</code>
+     * <li><code>io.github.tsgen.typescript.generator.ext.BeanPropertyPathExtension}</code>
      *   - generates type-safe property path getters</li>
-     * <li><code>cz.habarta.typescript.generator.ext.TypeGuardsForJackson2PolymorphismExtension}</code></li>
+     * <li><code>io.github.tsgen.typescript.generator.ext.TypeGuardsForJackson2PolymorphismExtension}</code></li>
      * </ul>
      * Parameter {@link #extensionsWithConfiguration} can be used in case extension needs some configuration.
      */
