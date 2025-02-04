@@ -78,6 +78,12 @@ public class GenerateMojo extends AbstractMojo {
     private boolean allOptional;
 
     /**
+     * Generates Typescript with default Nullable Field
+     */
+    @Parameter
+    private boolean forceAllNullable;
+
+    /**
      * Generates TypeScript namespaces from Java packages. Default is <code>false</code>.
      */
     @Parameter
@@ -855,6 +861,7 @@ public class GenerateMojo extends AbstractMojo {
             settings.outputFileType = outputFileType;
         }
         settings.allOptional = allOptional;
+        settings.forceAllNullable = forceAllNullable;
         settings.outputKind = outputKind;
         settings.module = module;
         settings.namespace = namespace;

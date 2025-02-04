@@ -211,8 +211,9 @@ public class Emitter implements EmitterExtension.Writer {
         final String staticString = property.modifiers.isStatic ? "static " : "";
         final String readonlyString = property.modifiers.isReadonly ? "readonly " : "";
         final String questionMark = settings.allOptional || tsType instanceof TsType.OptionalType ? "?" : "";
+        final String forceNullable = settings.forceAllNullable ? " | null" : "";
         final String defaultString = property.getDefaultValue() != null ? " = " + property.getDefaultValue().format(settings) : "";
-        writeIndentedLine(staticString + readonlyString + quoteIfNeeded(property.getName(), settings) + questionMark + ": " + tsType.format(settings) + defaultString + ";");
+        writeIndentedLine(staticString + readonlyString + quoteIfNeeded(property.getName(), settings) + questionMark + ": " + tsType.format(settings) + forceNullable + defaultString + ";");
     }
 
     private void emitDecorators(List<TsDecorator> decorators) {

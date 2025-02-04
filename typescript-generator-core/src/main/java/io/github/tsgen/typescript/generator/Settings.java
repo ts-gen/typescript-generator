@@ -47,6 +47,7 @@ import java.util.stream.Stream;
  */
 public class Settings {
     public boolean allOptional = false;
+    public boolean forceAllNullable = false;
     public String newline = String.format("%n");
     public String quotes = "\"";
     public String indentString = "    ";
